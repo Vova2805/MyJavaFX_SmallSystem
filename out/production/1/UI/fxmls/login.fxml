@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="594.0" prefWidth="1033.0" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.controllers.loginController">
+    <stylesheets>
+        <URL value="@../styles/MainTheme.css " />
+    </stylesheets>
+    <children>
+      <BorderPane prefHeight="481.0" prefWidth="801.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <GridPane alignment="CENTER" hgap="10" prefHeight="412.0" prefWidth="801.0" styleClass="background" vgap="20.0">
+                <padding> <Insets bottom="10" left="25" right="25" top="25" />
+               </padding>
+            
+                <HBox alignment="BOTTOM_CENTER" prefHeight="40.0" prefWidth="278.0" spacing="10" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+            
+                <TextField fx:id="user_name" onKeyTyped="#keyTyped" opacity="0.78" promptText="Введіть своє ім'я" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                  <effect>
+                     <InnerShadow />
+                  </effect>
+               </TextField>
+                <HBox alignment="BOTTOM_CENTER" spacing="10" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                    <Button onAction="#handleSubmitButtonAction" text="Підтвердити" />
+                  <GridPane.margin>
+                     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                  </GridPane.margin>
+                </HBox>
+               <Label prefHeight="154.0" prefWidth="767.0" style="-fx-font-size: 35px;" text="Система оцінювання навичок програміста &#10;за методикою братів Дрейфус" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.hgrow="ALWAYS">
+                  <GridPane.margin>
+                     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                  </GridPane.margin>
+               </Label>
+               <HBox alignment="CENTER" prefHeight="41.0" prefWidth="416.0" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.rowSpan="2">
+                  <children>
+                     <Label fx:id="actiontarget" alignment="CENTER" contentDisplay="CENTER" style="-fx-text-fill: #ee1111;" />
+                  </children>
+               </HBox>
+               <Label alignment="BOTTOM_RIGHT" contentDisplay="BOTTOM" prefHeight="129.0" prefWidth="232.0" style="-fx-font-size: 15px;" text="Developed by Dudas  Volodymyr&#10;Lviv 2016" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.halignment="RIGHT" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                  <GridPane.margin>
+                     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                  </GridPane.margin>
+               </Label>
+               <columnConstraints>
+                  <ColumnConstraints maxWidth="150.0" minWidth="10.0" prefWidth="150.0" />
+                  <ColumnConstraints maxWidth="150.0" minWidth="10.0" prefWidth="150.0" />
+                  <ColumnConstraints hgrow="ALWAYS" maxWidth="450.0" minWidth="241.0" prefWidth="399.0" />
+                  <ColumnConstraints maxWidth="150.0" minWidth="10.0" prefWidth="140.0" />
+                  <ColumnConstraints maxWidth="150.0" minWidth="10.0" prefWidth="140.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+                  <RowConstraints maxHeight="21.0" minHeight="21.0" prefHeight="21.0" />
+                  <RowConstraints />
+                  <RowConstraints minHeight="10.0" prefHeight="120.0" />
+               </rowConstraints>
+            
+            </GridPane>
+         </center>
+         <top>
+            <AnchorPane prefHeight="16.0" prefWidth="801.0" BorderPane.alignment="CENTER">
+               <children>
+                  <BorderPane prefHeight="70.0" prefWidth="801.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <center>
+                        <MenuBar prefHeight="46.0" prefWidth="801.0" styleClass="context-menu" BorderPane.alignment="CENTER">
+                          <menus>
+                            <Menu mnemonicParsing="false" text="Допомога">
+                              <items>
+                                <MenuItem mnemonicParsing="false" onAction="#ShowInfo" text="Довідка" />
+                                    <MenuItem mnemonicParsing="false" onAction="#About" text="Про програму" />
+                                    <MenuItem mnemonicParsing="false" onAction="#AsAdmin" text="Увійти як адмін" />
+                              </items>
+                            </Menu>
+                          </menus>
+                        </MenuBar>
+                     </center>
+                  </BorderPane>
+               </children>
+            </AnchorPane>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

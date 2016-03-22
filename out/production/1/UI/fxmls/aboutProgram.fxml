@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="702.0" styleClass="background" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1">
+   <stylesheets>
+      <URL value="@../styles/MainTheme.css" />
+   </stylesheets>
+   <children>
+      <BorderPane layoutX="173.0" layoutY="134.0" prefHeight="186.0" prefWidth="581.0" AnchorPane.bottomAnchor="214.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <FlowPane prefHeight="272.0" prefWidth="31.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label prefHeight="187.0" prefWidth="468.0" text="Система передбачає повне проходження тестування&#10;із подальшим обчисленням і виводом результатів.&#10;Для найбільш правдоподібного результату потрібно &#10;завершити всі рівні. Удачі, майбутні програмісти!&#10;&#10;All rights reserved ® Dudas V.I.&#10;" />
+               </children></FlowPane>
+         </center>
+         <left>
+            <ImageView fitHeight="220.0" fitWidth="237.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@../../images/Information.png" />
+               </image>
+            </ImageView>
+         </left>
+         <top>
+            <Label alignment="CENTER" contentDisplay="CENTER" style="-fx-font-size: 20px;" text="Система оцінювання навичок програміста &#10;за методикою братів Дрейфус" textAlignment="CENTER" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </BorderPane.margin>
+            </Label>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

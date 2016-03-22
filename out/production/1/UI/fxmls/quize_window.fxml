@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane fx:id="anchor" prefHeight="624.0" prefWidth="1158.0" styleClass="background" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.controllers.quizeWindowController">
+    <stylesheets>
+        <URL value="@../styles/MainTheme.css" />
+    </stylesheets>
+   <children>
+      <BorderPane prefHeight="438.0" prefWidth="821.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <GridPane hgap="10.0" prefWidth="600" vgap="10.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" />
+                  <ColumnConstraints />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+                  <RowConstraints maxHeight="200.0" minHeight="60.0" prefHeight="60.0" vgrow="ALWAYS" />
+                  <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+                  <RowConstraints maxHeight="60.0" minHeight="30.0" prefHeight="40.0" vgrow="ALWAYS" />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints minHeight="10.0" prefHeight="100.0" />
+              </rowConstraints>
+               <children>
+                  <HBox alignment="CENTER" fillHeight="true" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                     <children>
+                        <Label id="questionText" alignment="CENTER" contentDisplay="CENTER" prefHeight="190.0" prefWidth="801.0" style="-fx-font-size: 30px;" text="Питання" textAlignment="CENTER" HBox.hgrow="SOMETIMES">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox id="answerBox" alignment="CENTER" fillHeight="true" prefHeight="74.0" prefWidth="1095.0" spacing="15" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.rowSpan="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                     <opaqueInsets>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" fillHeight="true" GridPane.columnSpan="2" GridPane.rowIndex="6">
+                     <children>
+                        <GridPane hgap="10" vgap="10">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="ALWAYS" />
+                            <ColumnConstraints hgrow="ALWAYS" />
+                              <ColumnConstraints hgrow="ALWAYS" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints fillHeight="true" />
+                          </rowConstraints>
+                           <children>
+                              <Button id="startAgain" fx:id="startAgain" mnemonicParsing="false" onAction="#ChangeQuestion" text="Почати рівень знову" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                              <Button id="previous" fx:id="previousQuestion" mnemonicParsing="false" onAction="#ChangeQuestion" text="Попереднє питання" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                               <Button id="next" fx:id="nextQuestion" mnemonicParsing="false" onAction="#ChangeQuestion" text="Наступне питання" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                           </children>
+                        </GridPane>
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                  </HBox>
+                  <HBox prefWidth="600.0" GridPane.rowIndex="1">
+                     <children>
+                        <HBox prefHeight="50.0" prefWidth="532.0">
+                           <children>
+                              <Label alignment="BASELINE_CENTER" layoutX="10.0" layoutY="10.0" style="-fx-font-size: 20px;" text="Користувач  :">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label id="user_name" style="-fx-font-size: 20px;" underline="true" HBox.hgrow="SOMETIMES">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="50.0" prefWidth="483.0">
+                           <children>
+                              <Label alignment="BASELINE_CENTER" prefHeight="30.0" prefWidth="102.0" style="-fx-font-size: 20px;" text="Рівень :">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label id="level_title" prefWidth="386.0" style="-fx-font-size: 20px;" underline="true" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <AnchorPane GridPane.hgrow="SOMETIMES" GridPane.rowIndex="7">
+                     <Label id="restLevels" style="-fx-font-size: 25px;" textAlignment="CENTER">
+                        <padding>
+                           <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                        </padding>
+                     </Label>
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                  </AnchorPane>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="8">
+                     <right>
+                        <Label id="restLevels" alignment="BOTTOM_RIGHT" contentDisplay="BOTTOM" prefHeight="78.0" prefWidth="240.0" style="-fx-font-size: 15px;" text="Developed by Volodymyr Dudas&#10;Lviv 2016" BorderPane.alignment="CENTER">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <BorderPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </BorderPane.margin>
+                        </Label>
+                     </right>
+                  </BorderPane>
+               </children>
+            </GridPane>
+         </center>
+         <top>
+            <MenuBar styleClass="context-menu" BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="Управління">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#ResetQuize" text="Почати тестування заново" />
+                        <MenuItem fx:id="previousQuestion1" mnemonicParsing="false" onAction="#ChangeQuestion" text="Попереднє питання" />
+                        <MenuItem fx:id="startAgain1" mnemonicParsing="false" onAction="#ChangeQuestion" text="Почати блок заново" />
+                        <MenuItem fx:id="nextQuestion1" mnemonicParsing="false" onAction="#ChangeQuestion" text="Наступне питання" />
+                        <MenuItem id="finish" mnemonicParsing="false" onAction="#finishQuize" text="Завершити тестування" />
+                        <MenuItem id="finish" mnemonicParsing="false" onAction="#changeUser" text="Змінити користувача" />
+                        <MenuItem mnemonicParsing="false" onAction="#exit" text="Вихід" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="Навігація">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#noviceAction" text="Новачок" />
+                        <MenuItem fx:id="startAgain11" mnemonicParsing="false" onAction="#beginnerAction" text="Твердий початківець" />
+                        <MenuItem fx:id="previousQuestion11" mnemonicParsing="false" onAction="#competentAction" text="Компетентний" />
+                        <MenuItem fx:id="nextQuestion11" mnemonicParsing="false" onAction="#proficientAction" text="Досвідчений" />
+                        <MenuItem id="finish" mnemonicParsing="false" onAction="#expertAction" text="Експерт" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Додатково">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#ShowInfo" text="Довідка" />
+                        <MenuItem mnemonicParsing="false" onAction="#About" text="Про програму" />
+                        <MenuItem mnemonicParsing="false" onAction="#AsAdmin" text="Увійти як адмін" />
+                     </items>
+                  </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>
